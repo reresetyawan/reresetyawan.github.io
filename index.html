@@ -167,7 +167,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" target="_blank" action="https://wa.me/0818599669/">
+                        <form id="contactForm" target="_blank" action="https://wa.me/+62818599669/">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -460,7 +460,8 @@
 			var t_email = document.getElementById('email').value;
 			var t_phone = document.getElementById('phone').value;
 			var t_message = document.getElementById('message').value;
-			t_full_message += "Name : " + t_name;
+			
+			t_full_message = "Name : " + t_name;
 			t_full_message += "Email : " + t_email;
 			t_full_message += "Phone : " + t_phone;
 			t_full_message += "Message : " + t_message;

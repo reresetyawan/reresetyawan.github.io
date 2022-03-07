@@ -167,7 +167,7 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" target="_blank" action="https://wa.me/0812345678/">
+                        <form id="contactForm" target="_blank" action="https://wa.me/0818599669/">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
@@ -189,7 +189,7 @@
                             </div>
                             <!-- Message input-->
                             <div class="form-floating mb-3">
-                                <textarea class="form-control" id="message" name="text" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
                                 <label for="message">Message</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
                             </div>
@@ -211,7 +211,9 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="submit">Send</button>
+                            <button class="btn btn-primary btn-xl disabled" id="submitButton" type="button">Send</button>
+                            <input type="submit" id="btnsend" style="display:block" />
+                            <input type="hidden" id="text" name="text"/>
                         </form>
                     </div>
                 </div>
@@ -452,5 +454,20 @@
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+        <script>
+		function goSend(){
+			var t_full_message;
+			var t_name = document.getElementById('name').value;
+			var t_email = document.getElementById('email').value;
+			var t_phone = document.getElementById('phone').value;
+			var t_message = document.getElementById('message').value;
+			t_full_message += "Name : " + t_name;
+			t_full_message += "Email : " + t_email;
+			t_full_message += "Phone : " + t_phone;
+			t_full_message += "Message : " + t_message;
+			document.getElementById('text').value = t_full_message;
+			document.getElementById('btnsend').click();
+		}
+		</script>
     </body>
 </html>

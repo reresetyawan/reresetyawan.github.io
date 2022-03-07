@@ -212,7 +212,6 @@
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
                             <button class="btn btn-primary btn-xl disabled" id="submitButton" type="button" onClick="goSend()">Send</button>
-                            <input type="submit" id="btnsend" style="display:none" />
                             <input type="hidden" id="text" name="text"/>
                         </form>
                     </div>
@@ -466,7 +465,7 @@
 			t_full_message += "Phone : " + t_phone;
 			t_full_message += "Message : " + t_message;
 			document.getElementById('text').value = t_full_message;
-			document.getElementById('btnsend').click();
+			document.getElementById('contactForm').submit();
 		}
 		</script>
     </body>
